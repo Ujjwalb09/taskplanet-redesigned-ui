@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Wallet, DollarSign, Users, Share2 } from "lucide-react";
-import AnimatedLeaderboard from "./AnimatedLeaderboard";
+import AnimatedLeaderboard from "./templates/AnimatedLeaderboard";
+import SocialMediaTask from "./templates/SocialMediaTask";
 
 const Main = () => {
   return (
@@ -61,6 +62,7 @@ const Main = () => {
       </div>
 
       <AnimatedLeaderboard />
+      <SocialMediaTask />
     </main>
   );
 };

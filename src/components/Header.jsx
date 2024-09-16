@@ -15,7 +15,7 @@ const Header = () => {
         <span className="bg-gray-100 text-gray-800 rounded-full px-2 py-1 text-sm">
           ₹1000
         </span>
-        <Avatar className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+        <Avatar className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center cursor-pointer">
           <AvatarImage src="/placeholder-avatar.jpg" />
           <AvatarFallback>
             <img src="/src/assets/avatarImg.png" alt="" />
