@@ -17,12 +17,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="bg-white border-t border-gray-200 shadow-md sticky bottom-0 z-50"
+      className="bg-[#F6F5F2] border-t border-gray-200 shadow-md sticky bottom-0 z-50 rounded-xl"
       style={{
         boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <div className="px-0 py-3">
+      <div className="px-2 py-3">
         <TooltipProvider>
           <nav className="flex justify-between items-center relative">
             <FooterButton icon={home} label="Home" />

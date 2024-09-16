@@ -59,10 +59,10 @@ const Header = () => {
       {avatarInfo && (
         <div
           ref={avatarInfoRef}
-          className="absolute top-[4rem] right-0 w-[12rem] h-[19.5rem] bg-white border border-gray-300 flex flex-col rounded-md cursor-pointer"
+          className="absolute top-[4rem] right-0 w-[12rem] h-[19.5rem] bg-[#F6F5F2] border border-gray-300 flex flex-col rounded-md cursor-pointer"
         >
           {/* my profile */}
-          <div className="flex justify-between items-center p-2  hover:bg-gray-100">
+          <div className="flex justify-between items-center p-2  hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={profile} alt="" className="h-4 w-4 mb-[2px]" />
               <p>My Profile</p>
@@ -74,7 +74,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* sponsor */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={sponsor} alt="" className="h-4 w-4 mb-[2px]" />
               <p>Taskplanet</p>
@@ -84,7 +84,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* call */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={call} alt="" className="h-4 w-4 mb-[2px]" />
               <p>+916307182501</p>
@@ -93,7 +93,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* whatsapp */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={whatsapp} alt="" className="h-4 w-4 mb-[2px]" />
               <p>+916307182501</p>
@@ -102,7 +102,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* leaderboard */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={leaderboard} alt="" className="h-4 w-4 mb-[2px]" />
               <p>Leader Board</p>
@@ -111,7 +111,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* task history */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={taskHistory} alt="" className="h-4 w-4 mb-[2px]" />
               <p>All Task History</p>
@@ -120,7 +120,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* settings */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={settings} alt="" className="h-4 w-4 mb-[2px]" />
               <p>Settings</p>
@@ -129,7 +129,7 @@ const Header = () => {
           <hr className="border-gray-200" />
 
           {/* logout */}
-          <div className="flex flex-col p-2 hover:bg-gray-100">
+          <div className="flex flex-col p-2 hover:bg-gray-200">
             <div className="text-sm flex items-center gap-2">
               <img src={logout} alt="" className="h-4 w-4 mb-[2px]" />
               <p>Logout</p>
