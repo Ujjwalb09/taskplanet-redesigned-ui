@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <footer
-      className="bg-white border-t border-gray-200 shadow-md"
+      className="bg-white border-t border-gray-200 shadow-md sticky bottom-0 z-50"
       style={{
         boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
       }}
