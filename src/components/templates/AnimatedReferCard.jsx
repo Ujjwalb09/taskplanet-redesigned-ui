@@ -46,7 +46,7 @@ const AnimatedReferCard = () => {
           />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {referCardImages.map((_, index) => (
           <div
             key={index}
