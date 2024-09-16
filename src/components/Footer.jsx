@@ -12,6 +12,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -39,14 +40,26 @@ const Footer = () => {
 const FooterButton = ({ icon, label }) => (
   <Tooltip delayDuration={0}>
     <TooltipTrigger asChild>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
-        <Button
-          variant="ghost"
-          className="flex flex-col items-center justify-center hover:bg-gray-100"
-        >
-          <img src={icon} alt={label} className="h-9 w-9 mb-1" />
-        </Button>
-      </motion.div>
+      {label !== "Home" ? (
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+          <Button
+            variant="ghost"
+            className="flex flex-col items-center justify-center hover:bg-gray-100"
+          >
+            <img src={icon} alt={label} className="h-9 w-9 mb-1" />
+          </Button>
+        </motion.div>
+      ) : (
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+          <Link
+            to="/"
+            variant="ghost"
+            className="flex flex-col items-center justify-center hover:bg-gray-100"
+          >
+            <img src={icon} alt={label} className="h-9 w-9 mb-1" />
+          </Link>
+        </motion.div>
+      )}
     </TooltipTrigger>
     <TooltipContent className="bg-white text-black text-sm">
       <p>{label}</p>

@@ -8,14 +8,15 @@ import youtube from "../../assets/social/youtube.png";
 import telegram from "../../assets/social/telegram.png";
 import linkedin from "../../assets/social/linkedin.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const socialMediaContent = [
-  { icon: instagram, label: "Instagram" },
-  { icon: facebook, label: "Facebook" },
-  { icon: x, label: "X", color: "bg-black" },
-  { icon: youtube, label: "Youtube" },
-  { icon: telegram, label: "Telegram" },
-  { icon: linkedin, label: "LinkedIn" },
+  { icon: instagram, label: "Instagram", to: "/instagram-tasks" },
+  { icon: facebook, label: "Facebook", to: "/facebook-tasks" },
+  { icon: x, label: "X", color: "bg-black", to: "/twitter-tasks" },
+  { icon: youtube, label: "Youtube", to: "/youtube-tasks" },
+  { icon: telegram, label: "Telegram", to: "/telegram-tasks" },
+  { icon: linkedin, label: "LinkedIn", to: "/linkedin-tasks" },
 ];
 
 const SocialMediaTask = () => {
@@ -46,7 +47,8 @@ const SocialMediaTask = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
+              <Link
+                to={item.to}
                 variant="outline"
                 className="w-full h-full flex flex-col items-center justify-center p-2 space-y-2 rounded-lg border-2 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md"
               >
@@ -69,7 +71,7 @@ const SocialMediaTask = () => {
                   </svg>
                   +5 points
                 </span>
-              </Button>
+              </Link>
             </motion.div>
           ))}
         </div>
