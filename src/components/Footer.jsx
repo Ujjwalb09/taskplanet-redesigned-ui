@@ -16,24 +16,34 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer
-      className="bg-[#F6F5F2] border-t border-gray-200 shadow-md sticky bottom-0 z-50 rounded-xl"
-      style={{
-        boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
+    <motion.div
+      className="sticky bottom-0 z-50"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.5, ease: "easeOut" },
       }}
     >
-      <div className="px-2 py-3">
-        <TooltipProvider>
-          <nav className="flex justify-between items-center relative">
-            <FooterButton icon={home} label="Home" />
-            <FooterButton icon={tasks} label="Tasks" />
-            <FooterButton icon={create} label="Create" />
-            <FooterButton icon={manageTasks} label="Manage Task" />
-            <FooterButton icon={leaderBoard} label="Leaderboard" />
-          </nav>
-        </TooltipProvider>
-      </div>
-    </footer>
+      <footer
+        className="bg-[#F6F5F2] border-t border-gray-200 shadow-md sticky bottom-0 z-50 rounded-xl"
+        style={{
+          boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <div className="px-2 py-3">
+          <TooltipProvider>
+            <nav className="flex justify-between items-center relative">
+              <FooterButton icon={home} label="Home" />
+              <FooterButton icon={tasks} label="Tasks" />
+              <FooterButton icon={create} label="Create" />
+              <FooterButton icon={manageTasks} label="Manage Task" />
+              <FooterButton icon={leaderBoard} label="Leaderboard" />
+            </nav>
+          </TooltipProvider>
+        </div>
+      </footer>
+    </motion.div>
   );
 };
 
