@@ -9,6 +9,7 @@ import taskHistory from "../assets/avatarInfo/task-history.png";
 import settings from "../assets/avatarInfo/settings.png";
 import logout from "../assets/avatarInfo/logout.png";
 import { useLocation } from "react-router-dom";
+import avatarImg from "../assets/avatarImg.png";
 const Header = () => {
   const [avatarInfo, setAvatarInfo] = useState(false);
   const [headerHeading, setHeaderHeading] = useState("Home");
@@ -65,9 +66,9 @@ const Header = () => {
           onClick={() => setAvatarInfo(!avatarInfo)}
           className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center cursor-pointer"
         >
-          <AvatarImage src="/placeholder-avatar.jpg" />
+          <AvatarImage src={avatarImg} />
           <AvatarFallback>
-            <img src="/src/assets/avatarImg.png" alt="" />
+            <img src={avatarImg} alt="" />
           </AvatarFallback>
         </Avatar>
       </div>
