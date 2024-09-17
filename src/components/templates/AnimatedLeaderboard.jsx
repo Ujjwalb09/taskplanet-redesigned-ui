@@ -1,23 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import img1 from "../../assets/banner1/1.png";
+import img2 from "../../assets/banner1/2.png";
+import img3 from "../../assets/banner1/3.png";
+import img4 from "../../assets/banner1/4.png";
 
 const AnimatedLeaderboard = () => {
   const leaderboardImages = [
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-qiabER8Hbmf7vJao2fB9vS56a5s4gw.png",
+      src: img1,
       alt: "Welcome to TaskPlanet",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-3kCOcxC64JMuYOJ2hyb1lXwk10NpoD.png",
+      src: img2,
       alt: "Daily Leaderboard",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-6APNvMPdqBNCpAJ8QPD1gb7KHjQv8E.png",
+      src: img3,
       alt: "Weekly Leaderboard",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-hwhmae29j3sE6Ms43UbcbKLZKxWdUD.png",
+      src: img4,
       alt: "Monthly Leaderboard",
     },
   ];

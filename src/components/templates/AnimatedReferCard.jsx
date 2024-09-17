@@ -1,19 +1,22 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import img1 from "../../assets/banner2/1.png";
+import img2 from "../../assets/banner2/2.png";
+import img3 from "../../assets/banner2/3.png";
 
 const AnimatedReferCard = () => {
   const referCardImages = [
     {
-      src: "https://res.cloudinary.com/green-valley-grocery/image/upload/v1718298663/answer_img/yssezekxomsupx3idjbg.png",
+      src: img1,
       alt: "Refer and Earn",
     },
     {
-      src: "https://res.cloudinary.com/green-valley-grocery/image/upload/v1718298712/answer_img/qajogndhzd01sc5uihyp.png",
+      src: img2,
       alt: "Premium membership",
     },
     {
-      src: "https://res.cloudinary.com/green-valley-grocery/image/upload/v1724410236/answer_img/nc9qgz7yp6tnddwnvd3w.png",
+      src: img3,
       alt: "Social media task",
     },
   ];
