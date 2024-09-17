@@ -7,6 +7,9 @@ import { Route, Routes } from "react-router-dom";
 import InstagramTask from "./components/task components/InstagramTask";
 import FacebookTask from "./components/task components/FacebookTask";
 import TwitterTask from "./components/task components/TwitterTask";
+import YoutubeTask from "./components/task components/YoutubeTask";
+import TelegramTask from "./components/task components/TelegramTask";
+import LinkedInTask from "./components/task components/LinkedInTask";
 function App() {
   return (
     <div className="flex flex-col h-screen max-w-md mx-auto">
@@ -17,6 +20,9 @@ function App() {
           <Route path="/instagram-tasks" element={<InstagramTask />} />
           <Route path="/facebook-tasks" element={<FacebookTask />} />
           <Route path="/twitter-tasks" element={<TwitterTask />} />
+          <Route path="/youtube-tasks" element={<YoutubeTask />} />
+          <Route path="/telegram-tasks" element={<TelegramTask />} />
+          <Route path="/linkedin-tasks" element={<LinkedInTask />} />
         </Routes>
       </div>
       <Footer />
