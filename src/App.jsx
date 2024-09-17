@@ -10,6 +10,8 @@ import TwitterTask from "./components/task components/TwitterTask";
 import YoutubeTask from "./components/task components/YoutubeTask";
 import TelegramTask from "./components/task components/TelegramTask";
 import LinkedInTask from "./components/task components/LinkedInTask";
+import TaskDetails from "./components/task components/TaskDetails";
+
 function App() {
   return (
     <div className="flex flex-col h-screen max-w-md mx-auto">
@@ -23,6 +25,7 @@ function App() {
           <Route path="/youtube-tasks" element={<YoutubeTask />} />
           <Route path="/telegram-tasks" element={<TelegramTask />} />
           <Route path="/linkedin-tasks" element={<LinkedInTask />} />
+          <Route path="/task-details" element={<TaskDetails />} />
         </Routes>
       </div>
       <Footer />

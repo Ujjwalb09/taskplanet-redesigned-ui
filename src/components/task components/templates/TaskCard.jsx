@@ -8,31 +8,46 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-const TaskCard = ({
-  title,
-  description,
-  subDescription,
-  color,
-  icon,
-  image,
-}) => {
+const TaskCard = ({ task }) => {
+  const navigate = useNavigate();
+
+  const taskData = {
+    title: task.title,
+    description: task.description,
+    color: task.color,
+    subDescription: task.subDescription,
+    image: task.image,
+    points: task.points,
+    link: task.link,
+  };
+
+  console.log(task);
+
+  const handleClick = () => {
+    navigate("/task-details", { state: { task: taskData } });
+  };
   return (
-    <Card className={`overflow-hidden ${color} text-white`}>
+    <Card className={`overflow-hidden ${task.color} text-white`}>
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-bold">{title}</CardTitle>
+        <CardTitle className="text-lg font-bold font-poppins">
+          {task.title}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="pb-2">
         <div className="flex items-center justify-between">
           <div className="space-y-1">
-            <p className="text-sm">{description}</p>
-            <p className="text-xs font-light">{subDescription}</p>
+            <p className="text-md font-barlow">{task.description}</p>
+            <p className="text-sm font-light font-barlow">
+              {task.subDescription}
+            </p>
           </div>
           <div className="flex items-center space-x-2">
-            {icon}
+            {task.icon}
             <img
-              src={image}
+              src={task.image}
               alt="Task illustration"
               className="w-20 h-20 object-cover rounded-lg"
             />
@@ -47,8 +62,9 @@ const TaskCard = ({
           whileTap={{ scale: 0.95 }}
         >
           <Button
+            onClick={handleClick}
             variant="secondary"
-            className="w-full bg-white text-black hover:bg-gray-200 transition-all duration-300"
+            className="w-full bg-white text-black hover:bg-gray-200 transition-all duration-300 font-barlow"
           >
             Visit Task
           </Button>

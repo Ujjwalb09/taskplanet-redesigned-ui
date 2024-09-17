@@ -55,7 +55,9 @@ const SocialMediaTask = () => {
                 <div className={`p-0 rounded-full`}>
                   <img src={item.icon} alt={item.label} className="h-8 w-8" />
                 </div>
-                <span className="text-sm font-medium">{item.label}</span>
+                <span className="text-sm font-medium font-barlow">
+                  {item.label}
+                </span>
                 <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

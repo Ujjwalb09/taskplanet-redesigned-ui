@@ -4,7 +4,7 @@ import { Wallet, DollarSign, Users, Share2 } from "lucide-react";
 
 const MainTopCard = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 mt-2">
+    <div className="grid grid-cols-3 gap-4 mt-2 font-barlow">
       {/* wallet card */}
       <Card className="overflow-hidden transition-all hover:shadow-lg h-20 flex flex-col">
         <CardHeader className="p-3 flex-shrink-0">

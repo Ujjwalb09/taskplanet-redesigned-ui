@@ -22,7 +22,7 @@ const ConnectWithUs = () => {
   return (
     <Card className="bg-gradient-to-r from-[#E5CCC3] to-[#6047DF]">
       <CardHeader className="p-3 flex items-center">
-        <CardTitle className="text-lg">Connect With Us</CardTitle>
+        <CardTitle className="text-lg font-poppins">Connect With Us</CardTitle>
       </CardHeader>
       <CardContent className="p-4 pt-0 flex justify-between">
         {socialIcons.map((Icon, index) => (

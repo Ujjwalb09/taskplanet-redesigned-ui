@@ -8,8 +8,10 @@ import leaderboard from "../assets/avatarInfo/leaderboard.png";
 import taskHistory from "../assets/avatarInfo/task-history.png";
 import settings from "../assets/avatarInfo/settings.png";
 import logout from "../assets/avatarInfo/logout.png";
+import { useLocation } from "react-router-dom";
 const Header = () => {
   const [avatarInfo, setAvatarInfo] = useState(false);
+  const [headerHeading, setHeaderHeading] = useState("Home");
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -30,12 +32,25 @@ const Header = () => {
     };
   }, []);
 
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") {
+      setHeaderHeading("Home");
+    } else if (path.includes("tasks")) {
+      setHeaderHeading("Task Home");
+    } else if (path.includes("task-details")) {
+      setHeaderHeading("Task Details");
+    }
+  }, [location]);
+
   const avatarInfoRef = useRef(null);
   const avatarRef = useRef(null);
   return (
     <header className="flex justify-between items-center p-4 bg-white shadow sticky top-0 z-50">
-      <h1 className="text-xl font-bold">Home</h1>
-      <div className="flex items-center justify-center space-x-2">
+      <h1 className="text-xl font-bold font-poppins">{headerHeading}</h1>
+      <div className="flex items-center justify-center space-x-2 font-poppins">
         <span className="flex items-center bg-purple-100 text-purple-800 rounded-full px-2 py-1 text-sm">
           <span className="mr-1">🎁</span>13
         </span>
@@ -59,7 +74,7 @@ const Header = () => {
       {avatarInfo && (
         <div
           ref={avatarInfoRef}
-          className="absolute top-[4rem] right-0 w-[12rem] h-[19.5rem] bg-[#F6F5F2] border border-gray-300 flex flex-col rounded-md cursor-pointer"
+          className="absolute top-[4rem] right-0 w-[12rem] h-[19.5rem] bg-[#F6F5F2] border border-gray-300 flex flex-col rounded-md cursor-pointer font-poppins"
         >
           {/* my profile */}
           <div className="flex justify-between items-center p-2  hover:bg-gray-200">

@@ -31,7 +31,7 @@ const ShareReferLink = () => {
               className="flex flex-col items-center p-2 h-auto hover:bg-gray-200 hover:scale-105 transition-all duration-300"
             >
               <img src={item.icon} alt={item.label} className="h-6 w-6 mb-1" />
-              <span className="text-xs">{item.label}</span>
+              <span className="text-xs font-barlow">{item.label}</span>
             </Button>
           </motion.div>
         ))}
