@@ -23,7 +23,7 @@ const SocialMediaTask = () => {
   return (
     <Card className="overflow-hidden shadow-lg">
       <CardHeader className="bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4">
-        <CardTitle className="text-lg font-bold text-white flex items-center">
+        <CardTitle className="text-lg font-bold text-white flex items-center font-poppins">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

@@ -11,7 +11,9 @@ const ShareReferLink = () => {
   return (
     <Card className="shadow-md">
       <CardHeader className="p-4">
-        <CardTitle className="text-lg">Share Your Refer Link</CardTitle>
+        <CardTitle className="text-lg font-poppins">
+          Share Your Refer Link
+        </CardTitle>
       </CardHeader>
       <CardContent className="p-4 pt-0 grid grid-cols-4 gap-4">
         {[
